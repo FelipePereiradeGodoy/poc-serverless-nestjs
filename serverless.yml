@@ -1,0 +1,25 @@
+service: poc-serverless-nestjs
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-optimize
+  - serverless-offline
+
+functions:
+  main: 
+    handler: src/start-serverless.handler
+    events:
+      - http:
+          method: any
+          path: /{any+}
+
+    extractCSV:
+      handler: src/application/controller/product.controller.SendProductsToRegisterQueue
+      events:
+        - s3:
+          bucket: seu-bucket-s3
+          event: s3:ObjectCreated:*

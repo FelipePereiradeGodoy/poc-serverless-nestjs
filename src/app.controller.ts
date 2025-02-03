@@ -4,11 +4,6 @@ import { Controller, Get, Post } from '@nestjs/common';
 export class AppController {
   constructor() {}
 
-  @Get('get-presigned-url')
-  async getPresignedURL() {
-    console.log('getPresignedURL');
-    return 'getPresignedURL';
-  }
 
   @Post('send-email')
   async sendEmail() {
