@@ -3,8 +3,10 @@
     - Gerar URL pré assinada para um bucket - OK
     - Extrair CSV para um formação de Objeto e Enviar mensagem para uma fila - OK
 
-    - Cadastrar o produto no redis e enviar para fila de email
+
     
-    - Consumir mensagem da fila e enviar email - falta tudo
+    - Consumir mensagem da fila e enviar email - foi criado o modulo de email e o caso de uso para enviar o email, falta os testes e o controller de consumir a mensagem
+
+    - Cadastrar o produto no redis e enviar para fila de email
 
     - ver possibilidade de tratar a dlq
